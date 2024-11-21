@@ -1,0 +1,7 @@
+.......2024-11-21
+
+  1.index.html html 작업 완료.
+
+  //WHERE START?
+  index.html CSS 입히기
+

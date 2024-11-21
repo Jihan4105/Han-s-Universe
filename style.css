@@ -1,0 +1,142 @@
+/* Global Variables */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", "Poppins", sans-serif;
+}
+
+a,
+i,
+span {
+  display: block;
+}
+
+:root {
+
+  /* Colors */
+  --lavander-mist : #E3E6F3;
+
+  --grey-1: #D5D5D5;
+  --grey-2: #C1C1C1;
+  --grey-3: #AAAAAA;
+  --grey-4: #808080;
+  --grey-5: #6B6B6B;
+  --grey-6: #565656;
+
+  /* transition */
+  --transition : all 0.3 ease;
+}
+
+
+
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 80px;
+  background: var(--lavander-mist);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  z-index: 999;
+  top: 0;
+  left: 0;
+}
+
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#navbar li {
+  list-style: none;
+  padding: 0 20px;
+  position: relative;
+}
+
+#navbar li a {
+  text-decoration: none;
+  font-size: 16px;
+
+  color: #1a1a1a;
+  transition: 0.3s ease;
+}
+
+
+#navbar li a:hover,
+#navbar li a.active {
+  color: var(--grey-2);
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after {
+  content: "";
+  width: 30%;
+  height: 2px;
+  background: var(--grey-4);
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+  
+}
+
+#navbar button.icon-container {
+  margin-right: 10px;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  border: transparent;
+  border-radius: 50%;
+  background-color: var(--lavander-mist);
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+#navbar button.icon-container:hover {
+  background-color: var(--grey-1);
+}
+
+#navbar button.icon-container i {
+  font-size: 20px;
+}
+
+#navbar button.icon-container .notification{
+  position: absolute;
+  top: 2px;
+  right: 3px;
+  background-color: #D41212;
+  color: white;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  font-size: 13px;
+  display: grid;
+  place-items: center;
+}
+
+
+/* HERO */
+.hero-orbit {
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 294px;
+  height: 294px;
+  border: 2px #4A437F dashed;
+  border-radius: 100%;
+  -webkit-animation: spin-right 20s linear infinite;
+  animation: spin-right 10s linear infinite;
+}
+
+/* ---------- Animation ---------- */
+@-webkit-keyframes spin-right {
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}

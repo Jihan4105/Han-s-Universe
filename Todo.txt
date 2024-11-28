@@ -5,3 +5,7 @@
   //WHERE START?
   index.html CSS 입히기
 
+........2024-11-28
+
+  1.Hero background 사이즈 조정하기(animation 이슈)
+  

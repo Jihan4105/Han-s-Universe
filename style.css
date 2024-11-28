@@ -23,13 +23,78 @@
   --transition : all 0.3 ease;
 }
 
+.section-title {
+  font-size: 45px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* ANIMATIONS------------------------ */
+
+.slide-top {
+  -webkit-animation: slide-top 0.5s ease-out both;
+  animation: slide-top 0.5s ease-out both;
+}
+
+@-webkit-keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  100% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  100% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+}
+
+.slide-bottom {
+  -webkit-animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes slide-bottom {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  100% {
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px);
+  }
+}
+
+@keyframes slide-bottom {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  100% {
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px);
+  }
+}
+
+
+/* HEADER */
 
 
 #header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 80px;
   background: var(--lavander-mist);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   position: sticky;
@@ -38,10 +103,17 @@
   left: 0;
 }
 
+#header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 #navbar {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0;
 }
 
 #navbar li {
@@ -53,30 +125,21 @@
 #navbar li a {
   text-decoration: none;
   font-size: 16px;
-
   color: #1a1a1a;
   transition: 0.3s ease;
 }
 
-
 #navbar li a:hover,
 #navbar li a.active {
-  color: var(--grey-2);
+  color: var(--grey-4);
 }
 
-#navbar li a.active::after,
-#navbar li a:hover::after {
-  content: "";
-  width: 30%;
-  height: 2px;
-  background: var(--grey-4);
-  position: absolute;
-  bottom: -4px;
-  left: 20px;
-  
+#navbar li.profile-bar {
+  display: flex;
+  align-items: center;
 }
 
-#navbar button.icon-container {
+#navbar li button.icon-container {
   margin-right: 10px;
   position: relative;
   width: 40px;
@@ -89,49 +152,139 @@
   cursor: pointer;
 }
 
-#navbar button.icon-container:hover {
-  background-color: var(--grey-1);
+#navbar li button.icon-container:hover {
+  background-color: var(--grey-2);
 }
 
-#navbar button.icon-container i {
+#navbar li button.icon-container i {
   font-size: 20px;
 }
 
-#navbar button.icon-container .notification{
+#navbar li button.icon-container .notification{
   position: absolute;
   top: 2px;
-  right: 3px;
+  right: 2px;
   background-color: #D41212;
   color: white;
-  height: 16px;
-  width: 16px;
+  height: 17px;
+  width: 17px;
   border-radius: 50%;
   font-size: 13px;
-  display: grid;
   place-items: center;
+}
+
+#navbar li button.userprofile {
+  border: none;
+  background-color: transparent;
+}
+
+#navbar li.sidebar-toggler {
+  display: none;
 }
 
 
 /* HERO */
-.hero-orbit {
-  /* position: absolute; */
-  top: 0;
-  left: 0;
-  width: 294px;
-  height: 294px;
-  border: 2px #4A437F dashed;
-  border-radius: 100%;
-  -webkit-animation: spin-right 20s linear infinite;
-  animation: spin-right 10s linear infinite;
+
+#hero {
+  background-image: url("./images/index/hero-background.png");
+  background-size: cover;
+  background-position-x: 75%;
+  background-repeat: no-repeat;
+  height: 700px;
+  animation: hero-moving 5s linear infinite;
 }
 
-/* ---------- Animation ---------- */
-@-webkit-keyframes spin-right {
-  100% {
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg);
+@keyframes hero-moving {
+  0% {
+    background-position-x: 75%;
   }
+  25% {
+    background-position-x: 85%
+  }
+  50% {
+    background-position-x: 95%;
+  }
+  75% {
+    background-position-x: 85%
+  }
+  100% {
+    background-position-x: 75%;
+  }
+}
+
+#hero .hero-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#hero .planet-container {
+  position: relative;
+}
+
+#hero .planet-container .planet img{
+  position: absolute;
+  left: 130px;
+  top: 100px;
+  width: 350px;
+}
+
+#hero .planet-container .profile {
+  background: url("./images/index/hero-profile.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 270px;
+  height: 270px;
+  border-radius: 50%;
+  position: absolute;
+  left: 167px;
+  top: 200px;
+  box-shadow: 0 0 10px 5px #ffff;
+}
+
+#hero .astronaut-container {
+  text-align: center;
+}
+
+#hero .astronaut-container h1 {
+  color: #ffff;
+}
+
+#hero .astronaut-container .astronaut {
+  position: relative;
+}
+
+#hero .astronaut-container .astronaut a {
+  position: absolute;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  background: #ffff;
+}
+
+#hero .astronaut-container .astronaut a img {
+  width: 170px;
+}
+
+#hero .astronaut-container .astronaut .workout {
+  left: -20px;
+  top: 0;
+}
+
+#hero .astronaut-container .astronaut .books {
+  right: 0;
+  top: 40px;
+}
+
+#hero .astronaut-container .astronaut .skills {
+  left: 0;
+  bottom: -60px;
+}
+
+#hero .astronaut-container .astronaut .thoughts {
+  right: 0;
+  bottom: 0;
+  object-fit: cover;
+  object-position: 20% 50%;
 }

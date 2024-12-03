@@ -1,11 +1,23 @@
 .......2024-11-21
 
-  1.index.html html 작업 완료.
+  1.index.html html 작업 완료. (SOLVED)
 
   //WHERE START?
-  index.html CSS 입히기
+  index.html CSS 입히기 (SOLVED)
 
 ........2024-11-28
 
-  1.Hero background 사이즈 조정하기(animation 이슈)
+  1.Hero background 사이즈 조정하기(animation 이슈) (SOLVED)
+
+........2024-12-03
+
+  한것.
+
+    1. Hero background 사이즈 조정문제 해결
+    2. Planet clickable area 조정 문제 해결
+    3. index.html News 섹션 html, css 둘다 완료
+
+  해야할 것.
+
+    index.html Contact 섹션 제작하기.
   

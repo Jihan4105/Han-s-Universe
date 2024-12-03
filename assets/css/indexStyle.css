@@ -39,7 +39,7 @@
   --section-padding: 80px;
 
   /* Shadows */
-  --card-shadow: 1px 1px 29px 9px rgba(100, 100, 111, 0.2);
+  --shadow-1: 1px 1px 29px 9px rgba(100, 100, 111, 0.2);
 
   /* radius */
   --radius: 5px;
@@ -231,7 +231,7 @@ a {
 /* HERO */
 
 #hero {
-  background-image: url("./images/index/hero-background.png");
+  background-image: url("../images/index/hero-background.png");
   background-position-y: 50%;
   background-repeat: no-repeat;
   height: 700px;
@@ -269,7 +269,7 @@ a {
 }
 
 .planet-container .profile {
-  background: url("./images/index/hero-profile.png");
+  background: url("../images/index/hero-profile.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -337,13 +337,19 @@ a {
 .news-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  gap: 40px;
   padding-left: 0;
+}
+
+.news-genre {
+  font-size: var(--fs-2);
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .news-card {
   border-radius: var(--radius);
-  box-shadow: var(--card-shadow);
+  box-shadow: var(--shadow-1);
 }
 
 .news-banner {

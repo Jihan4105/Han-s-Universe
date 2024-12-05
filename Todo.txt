@@ -20,4 +20,11 @@
   해야할 것.
 
     index.html Contact 섹션 제작하기.
-  
+
+
+........2024-12-05
+
+  해야할 것.
+
+  1. Contact Form에 버튼 hover속성 추가
+  2. footer 스타일 입히기.

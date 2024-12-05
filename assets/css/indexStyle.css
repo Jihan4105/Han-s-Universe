@@ -58,6 +58,7 @@ li {
 
 a {
   text-decoration: none;
+  color: black;
 }
 
 
@@ -490,6 +491,12 @@ a {
 
 .getin .getin-details .pro-link i {
   margin-right: 8px;
+  font-size: 2rem;
+  transition: var(--transition);
+}
+
+.getin .getin-details .pro-link i:hover {
+  color: var(--grey-4);
 }
 
 .form {
@@ -569,5 +576,26 @@ a {
 #footer .footer-container {
   display: flex;
   justify-content: center;
+  padding-bottom: 40px;
+}
+
+.footer-content p {
+  margin-bottom: 10px;
+}
+
+.footer-content p:nth-child(4) {
+  margin-bottom: 0px;
+}
+
+.footer-content p:nth-child(5) {
+  margin-bottom: 30px;
+}
+
+.footer-content p:nth-child(5) span {
+  visibility: hidden;
+}
+
+.footer-content h5 {
+  font-weight: var(--fw-600);
 }
 

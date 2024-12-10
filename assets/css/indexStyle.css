@@ -857,6 +857,10 @@ button.userprofile {
   .form .form-col textarea {
     max-height: 300px;
   }
+
+  .form {
+    padding: 25px;
+  }
 }
 
 @media (max-width: 400px) {
@@ -868,9 +872,6 @@ button.userprofile {
     min-width: 200px;
   }
 
-  .form {
-    padding: 25px;
-  }
 }
 
 /* FOOTER */
@@ -959,6 +960,10 @@ button.userprofile {
   .footer-links ul{
     padding-left: 10px;
   }
+}
+
+@media (max-width: 500px) {
+
 }
 
 @media (max-width: 400px) {
